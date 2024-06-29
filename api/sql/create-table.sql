@@ -6,7 +6,7 @@ CREATE TABLE `usuarios` (
                             `nome` varchar(100) NOT NULL,
                             `email` varchar(50) NOT NULL,
                             `senha` varchar(50) NOT NULL,
-                            `data_cadastro` datetime NOT NULL,
+                            `data_cadastro` datetime default timestamp.now() NOT NULL,
                             `usuario_tipo` varchar(20) DEFAULT NULL,
                             PRIMARY KEY (`usuario_id`),
                             UNIQUE KEY `user_unique` (`email`)
